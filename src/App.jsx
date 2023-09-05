@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 import Card from "./components/Card";
+import Search from "./components/Search";
 
 const App = () => {
 
@@ -18,20 +19,10 @@ const [images,setImages]=useState([])
 
 
 
-  const inputChangeHandler=(e)=>{
-    setInput(e.target.value)
-  }
 
   return (
-    <div className="main-container">
-      <div className="search-container">
-        <input
-          type="search"
-          className="searchbar"
-          placeholder="Search Pokemon...."
-          onChange={inputChangeHandler}
-        />
-      </div>
+      <div className="main-container">
+      <Search setInput={setInput}/>
       <Card images={images} input={input}/>
     </div>
   );

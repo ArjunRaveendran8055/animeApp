@@ -1,17 +1,17 @@
 import React from "react";
 
 const Card = (props) => {
-
-    const {images,input}=props
-    console.log("images are",images)
+  const { images, input } = props;
+  console.log("images are", images);
   return (
     <div className="grid-container">
-      {
-        images.filter((item, i) => {
+      {images
+        .filter((item, i) => {
           if (item.name.includes(input)) {
             return item;
           }
-        }).map((item, index) => {
+        })
+        .map((item, index) => {
           return (
             <div className="card" key={index}>
               <img
