@@ -5,7 +5,6 @@ import "./App.css";
 class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       input: "",
       images: [],
@@ -31,7 +30,7 @@ class App extends React.Component {
       <div className="main-container">
         <div className="search-container">
           <input
-            type="text"
+            type="search"
             className="searchbar"
             placeholder="Search Pokemon...."
             onChange={inputChangeHandler}
